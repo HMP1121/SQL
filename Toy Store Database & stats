@@ -1,0 +1,35 @@
+-- Create a toy store data base 
+
+CREATE TABLE toy (ID INTEGER PRIMARY KEY, BRAND TEXT, AISLE INTEGER, PRICE INTEGER, AGE INTEGER);
+
+INSERT INTO toy VALUES  
+(1, 'doc mcstuffins', 1, 20, 2), 
+(2, 'paw patrol', 2, 21, 3), 
+(3, 'elmo', 3, 14, 4), 
+(4, 'cookie monster', 4, 14, 4), 
+(5, 'fire trucks', 5, 14, 5), 
+(6, 'scooter', 6, 40, 10), 
+(7, 'checkers', 7, 22, 12), 
+(8, 'dominos', 8, 23, 12), 
+(9, 'connect 4', 9, 25, 12), 
+(10, 'bikes', 10, 80,10), 
+(11, 'puzzles', 11, 21, 3), 
+(12, 'blocks', 12, 12, 3), 
+(13, 'play dough', 13, 15, 4), 
+(14, 'chalk', 14, 10, 5), 
+(15, 'toy vaccum', 15, 30, 4);
+
+--display the database order price.
+SELECT * FROM toy
+ORDER BY PRICE desc;
+
+--What are the top 3 most expensive toys for kids 5 & under?
+SELECT item,PRICE FROM toy 
+WHERE AGE <=5 
+ORDER BY PRICE DESC
+LIMIT 3;
+
+-- Display top three items that sold the least units.
+ SELECT item,units_sold FROM toy 
+ ORDER BY units_sold LIMIT 3;
+
