@@ -29,7 +29,7 @@ WHERE AGE <=5
 ORDER BY PRICE DESC
 LIMIT 3;
 
--- Display top three items that sold the least units.
+-- Display the top three items that sold the least amount of units.
  SELECT item,units_sold FROM toy 
  ORDER BY units_sold LIMIT 3;
 
